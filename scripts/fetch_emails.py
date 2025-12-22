@@ -1524,6 +1524,9 @@ def merge_with_existing(existing_data: Dict, new_giornate: List[Giornata], new_l
     for g_data in merged_giornate_data:
         turni = []
         for t_data in g_data.get('turni', []):
+            # Aggiungi matricola di default se mancante (rimossa per privacy)
+            if 'matricola' not in t_data:
+                t_data['matricola'] = EMPLOYEE_ID
             turni.append(Turno(**t_data))
         giornata = Giornata(
             data=g_data['data'],
@@ -1575,7 +1578,11 @@ def archive_year(anno: int):
     # Calcola statistiche per l'anno
     giornate_obj = []
     for g_data in giornate_anno:
-        turni = [Turno(**t) for t in g_data.get('turni', [])]
+        turni_data = g_data.get('turni', [])
+        for t in turni_data:
+            if 'matricola' not in t:
+                t['matricola'] = EMPLOYEE_ID
+        turni = [Turno(**t) for t in turni_data]
         giornate_obj.append(Giornata(
             data=g_data['data'],
             turni=turni,
