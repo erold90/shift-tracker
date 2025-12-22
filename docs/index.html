@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Shift Dashboard">
+    <meta name="theme-color" content="#0f172a">
+    <title>Shift Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <h1>Shift Dashboard</h1>
+            <div class="header-right">
+                <select id="yearSelect" class="year-select">
+                    <option value="current">2025</option>
+                </select>
+                <span class="header-update" id="lastUpdate">--</span>
+            </div>
+        </header>
+
+        <!-- Tab Content -->
+        <main class="tab-content">
+            <!-- HOME TAB -->
+            <section class="tab-pane active" id="tabHome">
+                <!-- Hero: Straordinario Mese -->
+                <div class="hero-single">
+                    <div class="hero-main">
+                        <span class="hero-value" id="straordMese">0h</span>
+                        <span class="hero-label">Straordinario <span id="meseLabel">Dicembre</span></span>
+                    </div>
+                    <div class="hero-details">
+                        <div class="hero-detail">
+                            <span class="detail-value" id="oreMese">0</span>
+                            <span class="detail-label">ore lavorate</span>
+                        </div>
+                        <div class="hero-detail">
+                            <span class="detail-value" id="giorniMese">0</span>
+                            <span class="detail-label">giorni</span>
+                        </div>
+                        <div class="hero-detail">
+                            <span class="detail-value" id="scorteMese">0</span>
+                            <span class="detail-label">turnazioni</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breakdown Straordinario -->
+                <div class="straord-breakdown">
+                    <div class="straord-type">
+                        <span class="straord-label">Diurno</span>
+                        <span class="straord-value" id="straordDiurno">0h</span>
+                    </div>
+                    <div class="straord-type">
+                        <span class="straord-label">Notturno</span>
+                        <span class="straord-value" id="straordNotturno">0h</span>
+                    </div>
+                    <div class="straord-type">
+                        <span class="straord-label">Festivo</span>
+                        <span class="straord-value" id="straordFestivo">0h</span>
+                    </div>
+                    <div class="straord-type">
+                        <span class="straord-label">Fest. Nott.</span>
+                        <span class="straord-value" id="straordFestivoNott">0h</span>
+                    </div>
+                </div>
+
+                <!-- Mini Stats -->
+                <div class="mini-stats">
+                    <div class="mini-stat">
+                        <span class="mini-value" id="giorniLavorati">0</span>
+                        <span class="mini-label">Giorni 2025</span>
+                    </div>
+                    <div class="mini-stat">
+                        <span class="mini-value" id="straordTotale">0h</span>
+                        <span class="mini-label">Straord. Tot.</span>
+                    </div>
+                    <div class="mini-stat">
+                        <span class="mini-value" id="giorniRiposo">0</span>
+                        <span class="mini-label">Riposi</span>
+                    </div>
+                    <div class="mini-stat">
+                        <span class="mini-value" id="scorteTotale">0</span>
+                        <span class="mini-label">Turnaz. Tot.</span>
+                    </div>
+                </div>
+
+                <!-- Alert Licenze Pending -->
+                <div class="alert alert-warning" id="alertLicenze" style="display: none;">
+                    <span>⏳</span>
+                    <span>Hai <strong id="licenzePending">0</strong> licenze in attesa</span>
+                    <button onclick="this.parentElement.style.display='none'">&times;</button>
+                </div>
+
+                <!-- Prossimi Servizi -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Prossimi Servizi</h2>
+                    </div>
+                    <div class="list-container" id="prossimiServizi">
+                        <div class="empty-state">Nessun servizio</div>
+                    </div>
+                </div>
+
+                <!-- Riepilogo Mesi -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Riepilogo 2025</h2>
+                        <button class="btn-small" id="btnExport">CSV</button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="chartMesi"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CALENDARIO TAB -->
+            <section class="tab-pane" id="tabCalendario">
+                <div class="calendar-header">
+                    <button id="prevMonth" class="cal-nav">&lt;</button>
+                    <h2 id="calendarMonthTitle">Dicembre 2025</h2>
+                    <button id="nextMonth" class="cal-nav">&gt;</button>
+                </div>
+                <div class="calendar-grid">
+                    <div class="cal-weekdays">
+                        <span>Lun</span>
+                        <span>Mar</span>
+                        <span>Mer</span>
+                        <span>Gio</span>
+                        <span>Ven</span>
+                        <span>Sab</span>
+                        <span>Dom</span>
+                    </div>
+                    <div class="cal-days" id="calendarDays"></div>
+                </div>
+                <!-- Legenda -->
+                <div class="calendar-legend">
+                    <span class="legend-item"><span class="legend-dot servizio"></span>Servizio</span>
+                    <span class="legend-item"><span class="legend-dot straord"></span>Straordinario</span>
+                    <span class="legend-item"><span class="legend-dot riposo"></span>Riposo</span>
+                    <span class="legend-item"><span class="legend-dot licenza"></span>Licenza</span>
+                    <span class="legend-item"><span class="legend-dot manual"></span>Manuale</span>
+                </div>
+                <!-- Dettaglio giorno selezionato -->
+                <div class="day-detail" id="dayDetail" style="display: none;">
+                    <div class="day-detail-header">
+                        <h3 id="dayDetailTitle">--</h3>
+                        <button onclick="document.getElementById('dayDetail').style.display='none'">&times;</button>
+                    </div>
+                    <div id="dayDetailContent"></div>
+                </div>
+            </section>
+
+            <!-- SERVIZI TAB -->
+            <section class="tab-pane" id="tabServizi">
+                <div class="section-header">
+                    <h2>Tutti i Servizi</h2>
+                    <span class="badge" id="serviziCount">0</span>
+                </div>
+                <div class="filter-tabs" id="serviziFilters">
+                    <button class="tab active" data-filter="tutti">Tutti</button>
+                    <button class="tab" data-filter="presenza">Presenze</button>
+                    <button class="tab" data-filter="assenza">Assenze</button>
+                </div>
+                <div class="list-container scrollable" id="serviziList">
+                    <div class="empty-state">Caricamento...</div>
+                </div>
+            </section>
+
+            <!-- LICENZE TAB -->
+            <section class="tab-pane" id="tabLicenze">
+                <div class="section-header">
+                    <h2>Licenze</h2>
+                </div>
+                <div class="filter-tabs" id="licenzeFilters">
+                    <button class="tab active" data-filter="pending">In Attesa</button>
+                    <button class="tab" data-filter="approvate">Approvate</button>
+                    <button class="tab" data-filter="rifiutate">Rifiutate</button>
+                    <button class="tab" data-filter="tutte">Tutte</button>
+                </div>
+                <div class="list-container scrollable" id="licenzeList">
+                    <div class="empty-state">Nessuna licenza</div>
+                </div>
+            </section>
+
+            <!-- IMPOSTAZIONI TAB -->
+            <section class="tab-pane" id="tabImpostazioni">
+                <div class="section-header">
+                    <h2>Impostazioni</h2>
+                </div>
+
+                <!-- Licenza Ordinaria Annuale -->
+                <div class="settings-card">
+                    <div class="settings-header">
+                        <span class="settings-icon">📋</span>
+                        <h3>Licenza Ordinaria</h3>
+                    </div>
+                    <div class="settings-body">
+                        <div class="settings-row">
+                            <label>Giorni spettanti all'anno</label>
+                            <input type="number" id="giorniLicenzaAnnuale" value="32" min="0" max="50">
+                        </div>
+                        <div class="settings-info" id="licenzaInfo">
+                            <div class="info-row">
+                                <span>Giorni usati:</span>
+                                <span id="giorniUsati">0</span>
+                            </div>
+                            <div class="info-row">
+                                <span>Giorni rimanenti:</span>
+                                <span id="giorniRimanenti" class="highlight">0</span>
+                            </div>
+                        </div>
+                        <p class="settings-note" id="licenzaNote">
+                            Il calcolo dei giorni rimanenti sarà attivo dal 2026.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Anzianità Lavorativa -->
+                <div class="settings-card">
+                    <div class="settings-header">
+                        <span class="settings-icon">⭐</span>
+                        <h3>Anzianità Lavorativa</h3>
+                    </div>
+                    <div class="settings-body">
+                        <div class="settings-row">
+                            <label>Data assunzione</label>
+                            <input type="date" id="dataAssunzione" value="2020-01-01">
+                        </div>
+                        <div class="settings-info">
+                            <div class="info-row">
+                                <span>Anni di attività:</span>
+                                <span id="anniServizio">0</span>
+                            </div>
+                        </div>
+                        <p class="settings-note">
+                            Usato per calcolare i giorni di ferie spettanti.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Monte Ore a Recupero -->
+                <div class="settings-card">
+                    <div class="settings-header">
+                        <span class="settings-icon">⏱️</span>
+                        <h3>Monte Ore a Recupero</h3>
+                    </div>
+                    <div class="settings-body">
+                        <div class="settings-row">
+                            <label>Ore non retribuite accumulate</label>
+                            <input type="number" id="oreRecuperoIniziali" value="0" min="0" step="0.5">
+                        </div>
+                        <div class="settings-info" id="recuperoInfo">
+                            <div class="info-row">
+                                <span>Ore usate (recuperi):</span>
+                                <span id="oreRecuperoUsate">0</span>
+                            </div>
+                            <div class="info-row">
+                                <span>Ore rimanenti:</span>
+                                <span id="oreRecuperoRimanenti" class="highlight">0</span>
+                            </div>
+                        </div>
+                        <p class="settings-note">
+                            Inserisci le ore non retribuite che hai accumulato. Verranno scalate quando usi "Recupero ore non retribuite".
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cache e Dati -->
+                <div class="settings-card">
+                    <div class="settings-header">
+                        <span class="settings-icon">🗑️</span>
+                        <h3>Cache e Dati</h3>
+                    </div>
+                    <div class="settings-body">
+                        <button class="btn-setting" onclick="clearCacheAndReload()">
+                            Svuota Cache e Ricarica
+                        </button>
+                        <button class="btn-setting btn-danger" onclick="clearAllData()">
+                            Elimina Dati Manuali
+                        </button>
+                        <p class="settings-note">
+                            Svuota cache per vedere gli aggiornamenti. I dati manuali sono salvati nel browser.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Info App -->
+                <div class="settings-card">
+                    <div class="settings-header">
+                        <span class="settings-icon">ℹ️</span>
+                        <h3>Info App</h3>
+                    </div>
+                    <div class="settings-body">
+                        <div class="info-row">
+                            <span>Versione:</span>
+                            <span id="appVersion">5.1</span>
+                        </div>
+                        <div class="info-row">
+                            <span>Ultimo sync:</span>
+                            <span id="lastSyncInfo">--</span>
+                        </div>
+                        <div class="info-row">
+                            <span>Giornate caricate:</span>
+                            <span id="giornateCount">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-save-settings" onclick="saveSettings()">
+                    Salva Impostazioni
+                </button>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-tab="tabHome">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Home</span>
+            </button>
+            <button class="nav-item" data-tab="tabCalendario">
+                <span class="nav-icon">📅</span>
+                <span class="nav-label">Calendario</span>
+            </button>
+            <button class="nav-item" data-tab="tabServizi">
+                <span class="nav-icon">📋</span>
+                <span class="nav-label">Servizi</span>
+            </button>
+            <button class="nav-item" data-tab="tabLicenze">
+                <span class="nav-icon">🏖️</span>
+                <span class="nav-label">Licenze</span>
+            </button>
+            <button class="nav-item" data-tab="tabImpostazioni">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-label">Impost.</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Dettagli</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Modal Aggiungi Servizio -->
+    <div id="modalAdd" class="modal">
+        <div class="modal-content modal-form">
+            <div class="modal-header">
+                <h3 id="modalAddTitle">Aggiungi Servizio</h3>
+                <button class="modal-close" onclick="closeAddModal()">&times;</button>
+            </div>
+            <form id="formAddServizio" onsubmit="saveManualEntry(event)">
+                <input type="hidden" id="addData" value="">
+
+                <div class="form-group">
+                    <label>Tipo</label>
+                    <select id="addTipo" required onchange="toggleFormFields()">
+                        <option value="PRESENZA">Servizio (PRESENZA)</option>
+                        <option value="ASSENZA">Assenza/Riposo</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="groupDettaglio">
+                    <label>Dettaglio</label>
+                    <select id="addDettaglio">
+                        <option value="Servizio esterno">Servizio esterno</option>
+                        <option value="Attività operativa">Attività operativa</option>
+                        <option value="Impegno istituzionale">Impegno istituzionale</option>
+                        <option value="Pratiche d'ufficio">Pratiche d'ufficio</option>
+                        <option value="Altro servizio">Altro servizio</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="groupAssenza" style="display:none;">
+                    <label>Tipo Assenza</label>
+                    <select id="addAssenza">
+                        <option value="Riposo settimanale">Riposo Settimanale</option>
+                        <option value="Riposo festivita' infrasettimanale">Riposo Festivo</option>
+                        <option value="Recupero di ore prestate nel mese">Recupero Ore</option>
+                        <option value="Recupero di riposo settimanale">Recupero Riposo Sett.</option>
+                        <option value="Licenza ordinaria">Licenza Ordinaria</option>
+                        <option value="Licenza straordinaria">Licenza Straordinaria</option>
+                    </select>
+                </div>
+
+                <div id="groupOrari">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Ora Inizio</label>
+                            <input type="time" id="addOraInizio" value="08:00" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Ora Fine</label>
+                            <input type="time" id="addOraFine" value="14:00" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeAddModal()">Annulla</button>
+                    <button type="submit" class="btn-primary">Salva</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

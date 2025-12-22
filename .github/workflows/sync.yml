@@ -1,0 +1,87 @@
+name: Sync Shift Emails
+
+on:
+  # Esegui ogni giorno alle 6:00 e 18:00 (ora italiana)
+  schedule:
+    - cron: '0 5 * * *'   # 6:00 CET (5:00 UTC)
+    - cron: '0 17 * * *'  # 18:00 CET (17:00 UTC)
+
+  # Permetti esecuzione manuale con opzione full resync
+  workflow_dispatch:
+    inputs:
+      full_resync:
+        description: 'Forza resync completo (elimina dati esistenti)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+  # Esegui anche su push al branch main (per test)
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/sync.yml'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Restore Gmail token from secrets
+        run: |
+          echo '${{ secrets.GMAIL_TOKEN }}' > token.json
+
+      - name: Restore credentials from secrets
+        run: |
+          echo '${{ secrets.GMAIL_CREDENTIALS }}' > credentials.json
+
+      - name: Full resync - elimina dati esistenti
+        if: ${{ github.event.inputs.full_resync == 'true' }}
+        run: |
+          echo "Forzando resync completo..."
+          rm -f data/servizi.json
+          rm -f docs/servizi.json
+          echo "Dati esistenti eliminati"
+
+      - name: Run email fetch script
+        run: |
+          python scripts/fetch_emails.py
+        env:
+          PYTHONUNBUFFERED: "1"
+          MEMO_SENDER: ${{ secrets.MEMO_SENDER }}
+          EMPLOYEE_ID: ${{ secrets.EMPLOYEE_ID }}
+
+      - name: Copy data to docs folder
+        run: |
+          cp data/servizi.json docs/servizi.json
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/servizi.json docs/servizi.json
+          git diff --staged --quiet || git commit -m "🔄 Sync servizi - $(date +'%Y-%m-%d %H:%M')"
+          # Pull with rebase in case of concurrent changes
+          git pull --rebase origin master || true
+          git push || echo "Push failed, will retry next sync"
