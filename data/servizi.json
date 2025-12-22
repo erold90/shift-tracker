@@ -1,17 +1,17 @@
 {
   "anno": 2025,
-  "last_update": "2025-12-22T16:33:09.382924",
+  "last_update": "2025-12-22T18:20:03.434217",
   "total_giorni": 332,
   "total_licenze": 130,
   "archives": [],
   "stats": {
-    "ore_totali": 2136.51,
-    "ore_ordinarie": 1199.48,
-    "ore_straordinario": 937.03,
+    "ore_totali": 2130.51,
+    "ore_ordinarie": 1195.48,
+    "ore_straordinario": 935.03,
     "giorni_lavorati": 204,
-    "media_ore_giorno": 10.47,
+    "media_ore_giorno": 10.44,
     "turnazioni_esterne": 263,
-    "straord_diurno": 853.0,
+    "straord_diurno": 851.0,
     "straord_notturno": 59.5,
     "straord_festivo_diurno": 21.5,
     "straord_festivo_notturno": 3.0,
@@ -25,18 +25,18 @@
         "ore": 0
       },
       "PRESENZA": {
-        "count": 326,
-        "ore": 2136.51
+        "count": 325,
+        "ore": 2130.51
       }
     },
     "per_mese": {
       "2025-12": {
         "giorni": 14,
-        "ore": 133.5,
-        "ore_ordinarie": 82.0,
-        "ore_straordinario": 51.5,
+        "ore": 127.5,
+        "ore_ordinarie": 78.0,
+        "ore_straordinario": 49.5,
         "turnazioni_esterne": 16,
-        "straord_diurno": 51.5,
+        "straord_diurno": 49.5,
         "straord_notturno": 0.0,
         "straord_festivo_diurno": 0,
         "straord_festivo_notturno": 0,
@@ -229,7 +229,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-22T16:33:09.369628",
+          "email_date": "2025-12-22T18:20:03.423556",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -254,7 +254,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-22T16:33:09.369620",
+          "email_date": "2025-12-22T18:20:03.423550",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -279,7 +279,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-22T16:33:09.369611",
+          "email_date": "2025-12-22T18:20:03.423541",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -304,7 +304,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-22T16:33:09.369602",
+          "email_date": "2025-12-22T18:20:03.423536",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -329,7 +329,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-22T16:33:09.369593",
+          "email_date": "2025-12-22T18:20:03.423530",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -354,7 +354,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-22T16:33:09.369585",
+          "email_date": "2025-12-22T18:20:03.423524",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -379,7 +379,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-22T16:33:09.369576",
+          "email_date": "2025-12-22T18:20:03.423511",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -1144,21 +1144,6 @@
       "data": "2025-12-01",
       "turni": [
         {
-          "id": "2025-12-01_0800_19ac0fdf",
-          "tipo": "PRESENZA",
-          "dettaglio": "Servizio esterno",
-          "data": "2025-12-01",
-          "ora_inizio": "08:00",
-          "ora_fine": "14:00",
-          "durata_ore": 6.0,
-          "is_straordinario": false,
-          "ore_ordinarie": 6.0,
-          "ore_straordinario": 0,
-          "email_date": "2025-11-26T17:27:42",
-          "email_id": "19ac0fdffbbb41c7",
-          "stato": "attivo"
-        },
-        {
           "id": "2025-12-01_1400_19ae46d9",
           "tipo": "PRESENZA",
           "dettaglio": "Servizio esterno",
@@ -1174,9 +1159,9 @@
           "stato": "attivo"
         }
       ],
-      "ore_totali": 8.0,
-      "ore_ordinarie": 6.0,
-      "ore_straordinario": 2.0,
+      "ore_totali": 2.0,
+      "ore_ordinarie": 2.0,
+      "ore_straordinario": 0,
       "is_licenza": false,
       "tipo_licenza": ""
     },
@@ -11721,7 +11706,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-22T16:33:09.369628"
+      "email_date": "2025-12-22T18:20:03.423556"
     },
     {
       "id": "lic_2026-01-06_ordinaria",
@@ -11735,7 +11720,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-22T16:33:09.369620"
+      "email_date": "2025-12-22T18:20:03.423550"
     },
     {
       "id": "lic_2026-01-05_ordinaria",
@@ -11749,7 +11734,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-22T16:33:09.369611"
+      "email_date": "2025-12-22T18:20:03.423541"
     },
     {
       "id": "lic_2026-01-04_ordinaria",
@@ -11763,7 +11748,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-22T16:33:09.369602"
+      "email_date": "2025-12-22T18:20:03.423536"
     },
     {
       "id": "lic_2026-01-03_ordinaria",
@@ -11777,7 +11762,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-22T16:33:09.369593"
+      "email_date": "2025-12-22T18:20:03.423530"
     },
     {
       "id": "lic_2026-01-02_ordinaria",
@@ -11791,7 +11776,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-22T16:33:09.369585"
+      "email_date": "2025-12-22T18:20:03.423524"
     },
     {
       "id": "lic_2026-01-01_ordinaria",
@@ -11805,7 +11790,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-22T16:33:09.369576"
+      "email_date": "2025-12-22T18:20:03.423511"
     },
     {
       "id": "lic_2025-12-31_ordinaria",
@@ -12240,20 +12225,6 @@
       "ore_ordinarie": 6.0,
       "ore_straordinario": 3.0,
       "email_date": "2025-12-03T15:15:49"
-    },
-    {
-      "id": "2025-12-01_0800_19ac0fdf",
-      "tipo_servizio": "PRESENZA",
-      "dettaglio": "Servizio esterno",
-      "data_inizio": "2025-12-01",
-      "ora_inizio": "08:00",
-      "data_fine": "2025-12-01",
-      "ora_fine": "14:00",
-      "durata_ore": 6.0,
-      "is_straordinario": false,
-      "ore_ordinarie": 6.0,
-      "ore_straordinario": 0,
-      "email_date": "2025-11-26T17:27:42"
     },
     {
       "id": "2025-12-01_1400_19ae46d9",
@@ -17912,5 +17883,5 @@
       "email_date": "2025-01-02T08:38:27"
     }
   ],
-  "total_servizi": 443
+  "total_servizi": 442
 }
