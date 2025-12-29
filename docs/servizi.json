@@ -1,6 +1,6 @@
 {
   "anno": 2025,
-  "last_update": "2025-12-28T17:23:44.493969",
+  "last_update": "2025-12-29T05:24:12.148311",
   "total_giorni": 332,
   "total_licenze": 130,
   "archives": [],
@@ -229,7 +229,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-28T17:23:44.483422",
+          "email_date": "2025-12-29T05:24:12.137637",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -254,7 +254,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-28T17:23:44.483417",
+          "email_date": "2025-12-29T05:24:12.137632",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -279,7 +279,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-28T17:23:44.483412",
+          "email_date": "2025-12-29T05:24:12.137626",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -304,7 +304,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-28T17:23:44.483406",
+          "email_date": "2025-12-29T05:24:12.137621",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -329,7 +329,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-28T17:23:44.483401",
+          "email_date": "2025-12-29T05:24:12.137616",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -354,7 +354,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-28T17:23:44.483394",
+          "email_date": "2025-12-29T05:24:12.137609",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -379,7 +379,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-28T17:23:44.483382",
+          "email_date": "2025-12-29T05:24:12.137596",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -11706,7 +11706,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-28T17:23:44.483422"
+      "email_date": "2025-12-29T05:24:12.137637"
     },
     {
       "id": "lic_2026-01-06_ordinaria",
@@ -11720,7 +11720,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-28T17:23:44.483417"
+      "email_date": "2025-12-29T05:24:12.137632"
     },
     {
       "id": "lic_2026-01-05_ordinaria",
@@ -11734,7 +11734,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-28T17:23:44.483412"
+      "email_date": "2025-12-29T05:24:12.137626"
     },
     {
       "id": "lic_2026-01-04_ordinaria",
@@ -11748,7 +11748,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-28T17:23:44.483406"
+      "email_date": "2025-12-29T05:24:12.137621"
     },
     {
       "id": "lic_2026-01-03_ordinaria",
@@ -11762,7 +11762,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-28T17:23:44.483401"
+      "email_date": "2025-12-29T05:24:12.137616"
     },
     {
       "id": "lic_2026-01-02_ordinaria",
@@ -11776,7 +11776,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-28T17:23:44.483394"
+      "email_date": "2025-12-29T05:24:12.137609"
     },
     {
       "id": "lic_2026-01-01_ordinaria",
@@ -11790,7 +11790,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-28T17:23:44.483382"
+      "email_date": "2025-12-29T05:24:12.137596"
     },
     {
       "id": "lic_2025-12-31_ordinaria",
