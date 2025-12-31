@@ -1,8 +1,8 @@
 {
   "anno": 2025,
-  "last_update": "2025-12-31T14:45:40.991505",
+  "last_update": "2025-12-31T17:24:00.510791",
   "total_giorni": 336,
-  "total_licenze": 130,
+  "total_licenze": 131,
   "archives": [],
   "stats": {
     "ore_totali": 2142.01,
@@ -195,7 +195,7 @@
         "Annullata": 1
       },
       "ordinaria": {
-        "Presentata": 43,
+        "Presentata": 44,
         "Validata": 27,
         "Approvata": 29,
         "Rifiutata": 2,
@@ -254,7 +254,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-31T14:45:40.981999",
+          "email_date": "2025-12-31T17:24:00.499703",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -269,51 +269,51 @@
       "data": "2026-01-06",
       "turni": [
         {
-          "id": "lic_2026-01-06_ordinaria",
+          "id": "2026-01-06_0000_19b74fca",
           "tipo": "ASSENZA",
-          "dettaglio": "Licenza ordinaria",
+          "dettaglio": "Riposo festivita' infrasettimanale",
           "data": "2026-01-06",
           "ora_inizio": "00:00",
           "ora_fine": "23:59",
-          "durata_ore": 0,
-          "is_straordinario": false,
-          "ore_ordinarie": 0,
-          "ore_straordinario": 0,
-          "email_date": "2025-12-31T14:45:40.981993",
-          "email_id": "licenza_ordinaria",
+          "durata_ore": 23.98,
+          "is_straordinario": true,
+          "ore_ordinarie": 6.0,
+          "ore_straordinario": 17.98,
+          "email_date": "2025-12-31T16:17:53",
+          "email_id": "19b74fcabb63dbb3",
           "stato": "attivo"
         }
       ],
       "ore_totali": 0,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "is_licenza": true,
-      "tipo_licenza": "ordinaria"
+      "is_licenza": false,
+      "tipo_licenza": ""
     },
     {
       "data": "2026-01-05",
       "turni": [
         {
-          "id": "lic_2026-01-05_ordinaria",
+          "id": "2026-01-05_0000_19b74fc1",
           "tipo": "ASSENZA",
-          "dettaglio": "Licenza ordinaria",
+          "dettaglio": "Riposo per donatori di sangue ed emocomponenti in struttura civile",
           "data": "2026-01-05",
           "ora_inizio": "00:00",
           "ora_fine": "23:59",
-          "durata_ore": 0,
-          "is_straordinario": false,
-          "ore_ordinarie": 0,
-          "ore_straordinario": 0,
-          "email_date": "2025-12-31T14:45:40.981988",
-          "email_id": "licenza_ordinaria",
+          "durata_ore": 23.98,
+          "is_straordinario": true,
+          "ore_ordinarie": 6.0,
+          "ore_straordinario": 17.98,
+          "email_date": "2025-12-31T16:17:17",
+          "email_id": "19b74fc1adf0954d",
           "stato": "attivo"
         }
       ],
       "ore_totali": 0,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "is_licenza": true,
-      "tipo_licenza": "ordinaria"
+      "is_licenza": false,
+      "tipo_licenza": ""
     },
     {
       "data": "2026-01-04",
@@ -329,7 +329,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-31T14:45:40.981983",
+          "email_date": "2025-12-31T17:24:00.499693",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -354,7 +354,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-31T14:45:40.981978",
+          "email_date": "2025-12-31T17:24:00.499686",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -379,7 +379,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-31T14:45:40.981965",
+          "email_date": "2025-12-31T17:24:00.499674",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -11806,6 +11806,16 @@
       "data_fine": "2025-12-20",
       "email_date": "2025-12-22T10:49:39",
       "email_id": "19b4576ee46a6877"
+    },
+    {
+      "id": "19b74fb0a4070570",
+      "tipo": "ordinaria",
+      "motivo": "",
+      "stato": "Presentata",
+      "data_inizio": "2026-01-02",
+      "data_fine": "2026-01-04",
+      "email_date": "2025-12-31T16:16:07",
+      "email_id": "19b74fb0a4070570"
     }
   ],
   "servizi": [
@@ -11835,35 +11845,35 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-31T14:45:40.981999"
+      "email_date": "2025-12-31T17:24:00.499703"
     },
     {
-      "id": "lic_2026-01-06_ordinaria",
+      "id": "2026-01-06_0000_19b74fca",
       "tipo_servizio": "ASSENZA",
-      "dettaglio": "Licenza ordinaria",
+      "dettaglio": "Riposo festivita' infrasettimanale",
       "data_inizio": "2026-01-06",
       "ora_inizio": "00:00",
       "data_fine": "2026-01-06",
       "ora_fine": "23:59",
-      "durata_ore": 0,
-      "is_straordinario": false,
-      "ore_ordinarie": 0,
-      "ore_straordinario": 0,
-      "email_date": "2025-12-31T14:45:40.981993"
+      "durata_ore": 23.98,
+      "is_straordinario": true,
+      "ore_ordinarie": 6.0,
+      "ore_straordinario": 17.98,
+      "email_date": "2025-12-31T16:17:53"
     },
     {
-      "id": "lic_2026-01-05_ordinaria",
+      "id": "2026-01-05_0000_19b74fc1",
       "tipo_servizio": "ASSENZA",
-      "dettaglio": "Licenza ordinaria",
+      "dettaglio": "Riposo per donatori di sangue ed emocomponenti in struttura civile",
       "data_inizio": "2026-01-05",
       "ora_inizio": "00:00",
       "data_fine": "2026-01-05",
       "ora_fine": "23:59",
-      "durata_ore": 0,
-      "is_straordinario": false,
-      "ore_ordinarie": 0,
-      "ore_straordinario": 0,
-      "email_date": "2025-12-31T14:45:40.981988"
+      "durata_ore": 23.98,
+      "is_straordinario": true,
+      "ore_ordinarie": 6.0,
+      "ore_straordinario": 17.98,
+      "email_date": "2025-12-31T16:17:17"
     },
     {
       "id": "lic_2026-01-04_ordinaria",
@@ -11877,7 +11887,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-31T14:45:40.981983"
+      "email_date": "2025-12-31T17:24:00.499693"
     },
     {
       "id": "lic_2026-01-03_ordinaria",
@@ -11891,7 +11901,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-31T14:45:40.981978"
+      "email_date": "2025-12-31T17:24:00.499686"
     },
     {
       "id": "lic_2026-01-02_ordinaria",
@@ -11905,7 +11915,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-31T14:45:40.981965"
+      "email_date": "2025-12-31T17:24:00.499674"
     },
     {
       "id": "2026-01-01_0000_19b6f56e",
