@@ -1,7 +1,7 @@
 {
   "anno": 2025,
-  "last_update": "2025-12-29T17:24:50.954906",
-  "total_giorni": 335,
+  "last_update": "2025-12-31T14:45:40.991505",
+  "total_giorni": 336,
   "total_licenze": 130,
   "archives": [],
   "stats": {
@@ -21,7 +21,7 @@
     "ore_recuperate_non_retribuite": 36,
     "per_tipo": {
       "ASSENZA": {
-        "count": 119,
+        "count": 120,
         "ore": 0
       },
       "PRESENZA": {
@@ -216,6 +216,31 @@
   },
   "giornate": [
     {
+      "data": "2026-01-29",
+      "turni": [
+        {
+          "id": "2026-01-29_0000_19b6f52a",
+          "tipo": "ASSENZA",
+          "dettaglio": "Riposo settimanale",
+          "data": "2026-01-29",
+          "ora_inizio": "00:00",
+          "ora_fine": "23:59",
+          "durata_ore": 23.98,
+          "is_straordinario": true,
+          "ore_ordinarie": 6.0,
+          "ore_straordinario": 17.98,
+          "email_date": "2025-12-30T13:54:06",
+          "email_id": "19b6f52ab8abacbe",
+          "stato": "attivo"
+        }
+      ],
+      "ore_totali": 0,
+      "ore_ordinarie": 0,
+      "ore_straordinario": 0,
+      "is_licenza": false,
+      "tipo_licenza": ""
+    },
+    {
       "data": "2026-01-07",
       "turni": [
         {
@@ -229,7 +254,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-29T17:24:50.943901",
+          "email_date": "2025-12-31T14:45:40.981999",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -254,7 +279,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-29T17:24:50.943896",
+          "email_date": "2025-12-31T14:45:40.981993",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -279,7 +304,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-29T17:24:50.943891",
+          "email_date": "2025-12-31T14:45:40.981988",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -304,7 +329,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-29T17:24:50.943886",
+          "email_date": "2025-12-31T14:45:40.981983",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -329,7 +354,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-29T17:24:50.943880",
+          "email_date": "2025-12-31T14:45:40.981978",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -354,7 +379,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2025-12-29T17:24:50.943874",
+          "email_date": "2025-12-31T14:45:40.981965",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -369,26 +394,26 @@
       "data": "2026-01-01",
       "turni": [
         {
-          "id": "lic_2026-01-01_ordinaria",
+          "id": "2026-01-01_0000_19b6f56e",
           "tipo": "ASSENZA",
-          "dettaglio": "Licenza ordinaria",
+          "dettaglio": "Riposo festivita' infrasettimanale",
           "data": "2026-01-01",
           "ora_inizio": "00:00",
           "ora_fine": "23:59",
-          "durata_ore": 0,
-          "is_straordinario": false,
-          "ore_ordinarie": 0,
-          "ore_straordinario": 0,
-          "email_date": "2025-12-29T17:24:50.943862",
-          "email_id": "licenza_ordinaria",
+          "durata_ore": 23.98,
+          "is_straordinario": true,
+          "ore_ordinarie": 6.0,
+          "ore_straordinario": 17.98,
+          "email_date": "2025-12-30T13:58:43",
+          "email_id": "19b6f56e242aff1f",
           "stato": "attivo"
         }
       ],
       "ore_totali": 0,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "is_licenza": true,
-      "tipo_licenza": "ordinaria"
+      "is_licenza": false,
+      "tipo_licenza": ""
     },
     {
       "data": "2025-12-31",
@@ -419,51 +444,51 @@
       "data": "2025-12-30",
       "turni": [
         {
-          "id": "lic_2025-12-30_ordinaria",
+          "id": "2025-12-30_0000_19b6f535",
           "tipo": "ASSENZA",
           "dettaglio": "Licenza ordinaria",
           "data": "2025-12-30",
           "ora_inizio": "00:00",
           "ora_fine": "23:59",
-          "durata_ore": 0,
-          "is_straordinario": false,
-          "ore_ordinarie": 0,
-          "ore_straordinario": 0,
-          "email_date": "2025-12-22T16:33:09.369558",
-          "email_id": "licenza_ordinaria",
+          "durata_ore": 47.98,
+          "is_straordinario": true,
+          "ore_ordinarie": 6.0,
+          "ore_straordinario": 41.98,
+          "email_date": "2025-12-30T13:54:50",
+          "email_id": "19b6f53541cf2f4e",
           "stato": "attivo"
         }
       ],
       "ore_totali": 0,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "is_licenza": true,
-      "tipo_licenza": "ordinaria"
+      "is_licenza": false,
+      "tipo_licenza": ""
     },
     {
       "data": "2025-12-29",
       "turni": [
         {
-          "id": "lic_2025-12-29_ordinaria",
+          "id": "2025-12-29_0000_19b6f79f",
           "tipo": "ASSENZA",
-          "dettaglio": "Licenza ordinaria",
+          "dettaglio": "Riposo settimanale",
           "data": "2025-12-29",
           "ora_inizio": "00:00",
           "ora_fine": "23:59",
-          "durata_ore": 0,
-          "is_straordinario": false,
-          "ore_ordinarie": 0,
-          "ore_straordinario": 0,
-          "email_date": "2025-12-22T16:33:09.369548",
-          "email_id": "licenza_ordinaria",
+          "durata_ore": 23.98,
+          "is_straordinario": true,
+          "ore_ordinarie": 6.0,
+          "ore_straordinario": 17.98,
+          "email_date": "2025-12-30T14:37:02",
+          "email_id": "19b6f79f96aef027",
           "stato": "attivo"
         }
       ],
       "ore_totali": 0,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "is_licenza": true,
-      "tipo_licenza": "ordinaria"
+      "is_licenza": false,
+      "tipo_licenza": ""
     },
     {
       "data": "2025-12-28",
@@ -11785,6 +11810,20 @@
   ],
   "servizi": [
     {
+      "id": "2026-01-29_0000_19b6f52a",
+      "tipo_servizio": "ASSENZA",
+      "dettaglio": "Riposo settimanale",
+      "data_inizio": "2026-01-29",
+      "ora_inizio": "00:00",
+      "data_fine": "2026-01-29",
+      "ora_fine": "23:59",
+      "durata_ore": 23.98,
+      "is_straordinario": true,
+      "ore_ordinarie": 6.0,
+      "ore_straordinario": 17.98,
+      "email_date": "2025-12-30T13:54:06"
+    },
+    {
       "id": "lic_2026-01-07_ordinaria",
       "tipo_servizio": "ASSENZA",
       "dettaglio": "Licenza ordinaria",
@@ -11796,7 +11835,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-29T17:24:50.943901"
+      "email_date": "2025-12-31T14:45:40.981999"
     },
     {
       "id": "lic_2026-01-06_ordinaria",
@@ -11810,7 +11849,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-29T17:24:50.943896"
+      "email_date": "2025-12-31T14:45:40.981993"
     },
     {
       "id": "lic_2026-01-05_ordinaria",
@@ -11824,7 +11863,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-29T17:24:50.943891"
+      "email_date": "2025-12-31T14:45:40.981988"
     },
     {
       "id": "lic_2026-01-04_ordinaria",
@@ -11838,7 +11877,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-29T17:24:50.943886"
+      "email_date": "2025-12-31T14:45:40.981983"
     },
     {
       "id": "lic_2026-01-03_ordinaria",
@@ -11852,7 +11891,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-29T17:24:50.943880"
+      "email_date": "2025-12-31T14:45:40.981978"
     },
     {
       "id": "lic_2026-01-02_ordinaria",
@@ -11866,21 +11905,21 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2025-12-29T17:24:50.943874"
+      "email_date": "2025-12-31T14:45:40.981965"
     },
     {
-      "id": "lic_2026-01-01_ordinaria",
+      "id": "2026-01-01_0000_19b6f56e",
       "tipo_servizio": "ASSENZA",
-      "dettaglio": "Licenza ordinaria",
+      "dettaglio": "Riposo festivita' infrasettimanale",
       "data_inizio": "2026-01-01",
       "ora_inizio": "00:00",
       "data_fine": "2026-01-01",
       "ora_fine": "23:59",
-      "durata_ore": 0,
-      "is_straordinario": false,
-      "ore_ordinarie": 0,
-      "ore_straordinario": 0,
-      "email_date": "2025-12-29T17:24:50.943862"
+      "durata_ore": 23.98,
+      "is_straordinario": true,
+      "ore_ordinarie": 6.0,
+      "ore_straordinario": 17.98,
+      "email_date": "2025-12-30T13:58:43"
     },
     {
       "id": "lic_2025-12-31_ordinaria",
@@ -11897,32 +11936,32 @@
       "email_date": "2025-12-22T16:33:09.369567"
     },
     {
-      "id": "lic_2025-12-30_ordinaria",
+      "id": "2025-12-30_0000_19b6f535",
       "tipo_servizio": "ASSENZA",
       "dettaglio": "Licenza ordinaria",
       "data_inizio": "2025-12-30",
       "ora_inizio": "00:00",
       "data_fine": "2025-12-30",
       "ora_fine": "23:59",
-      "durata_ore": 0,
-      "is_straordinario": false,
-      "ore_ordinarie": 0,
-      "ore_straordinario": 0,
-      "email_date": "2025-12-22T16:33:09.369558"
+      "durata_ore": 47.98,
+      "is_straordinario": true,
+      "ore_ordinarie": 6.0,
+      "ore_straordinario": 41.98,
+      "email_date": "2025-12-30T13:54:50"
     },
     {
-      "id": "lic_2025-12-29_ordinaria",
+      "id": "2025-12-29_0000_19b6f79f",
       "tipo_servizio": "ASSENZA",
-      "dettaglio": "Licenza ordinaria",
+      "dettaglio": "Riposo settimanale",
       "data_inizio": "2025-12-29",
       "ora_inizio": "00:00",
       "data_fine": "2025-12-29",
       "ora_fine": "23:59",
-      "durata_ore": 0,
-      "is_straordinario": false,
-      "ore_ordinarie": 0,
-      "ore_straordinario": 0,
-      "email_date": "2025-12-22T16:33:09.369548"
+      "durata_ore": 23.98,
+      "is_straordinario": true,
+      "ore_ordinarie": 6.0,
+      "ore_straordinario": 17.98,
+      "email_date": "2025-12-30T14:37:02"
     },
     {
       "id": "2025-12-28_0000_19b69e11",
@@ -18029,5 +18068,5 @@
       "email_date": "2025-01-02T08:38:27"
     }
   ],
-  "total_servizi": 446
+  "total_servizi": 447
 }
