@@ -1,6 +1,6 @@
 {
   "anno": 2026,
-  "last_update": "2026-01-02T05:21:07.730399",
+  "last_update": "2026-01-02T17:24:19.758253",
   "total_giorni": 27,
   "total_licenze": 16,
   "archives": [
@@ -344,7 +344,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2026-01-02T05:21:07.729700",
+          "email_date": "2026-01-02T17:24:19.757477",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -419,7 +419,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2026-01-02T05:21:07.729683",
+          "email_date": "2026-01-02T17:24:19.757446",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -444,7 +444,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2026-01-02T05:21:07.729675",
+          "email_date": "2026-01-02T17:24:19.757432",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -704,7 +704,7 @@
           "is_straordinario": false,
           "ore_ordinarie": 0,
           "ore_straordinario": 0,
-          "email_date": "2026-01-02T05:21:07.729650",
+          "email_date": "2026-01-02T17:24:19.757387",
           "email_id": "licenza_ordinaria",
           "stato": "attivo"
         }
@@ -1135,7 +1135,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2026-01-02T05:21:07.729700"
+      "email_date": "2026-01-02T17:24:19.757477"
     },
     {
       "id": "2025-12-26_0000_19b69da0",
@@ -1177,7 +1177,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2026-01-02T05:21:07.729683"
+      "email_date": "2026-01-02T17:24:19.757446"
     },
     {
       "id": "lic_2025-12-23_ordinaria",
@@ -1191,7 +1191,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2026-01-02T05:21:07.729675"
+      "email_date": "2026-01-02T17:24:19.757432"
     },
     {
       "id": "2025-12-22_1200_19b6ab68",
@@ -1345,7 +1345,7 @@
       "is_straordinario": false,
       "ore_ordinarie": 0,
       "ore_straordinario": 0,
-      "email_date": "2026-01-02T05:21:07.729650"
+      "email_date": "2026-01-02T17:24:19.757387"
     },
     {
       "id": "2025-12-12_1400_19b1889e",
